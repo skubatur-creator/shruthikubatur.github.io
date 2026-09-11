@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Shruthi Kubatur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Shruthi Kubatur</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="join.html">Join</a>
+      <a href="assets/cv.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Research</h1>
+
+    <p class="lede">My group works on reliable AI systems: how they fail, how to predict failure before it happens, and how to trace a failure back to its cause. The current center of gravity is autonomous AI agents. The methods come from probability, rare-event simulation, and computer vision.</p>
+
+    <h2>Failure trajectories in AI agents</h2>
+    <p>An agent does not produce a single output. It produces a trajectory: a sequence of observations, decisions, tool calls, and intermediate results that unfolds over a long horizon. Errors in this setting are rarely isolated. A misread instruction at step three shapes every decision that follows, and by the time the task fails the original mistake is buried under dozens of downstream steps.</p>
+    <p>I treat these trajectories as the object of study. The first goal is a multimodal model of failure in multi-step agentic workflows, one that captures how errors originate, propagate, and compound. The second is to use that model to estimate the probability of rare but consequential failures and to identify the pathways that lead to them. Rare-event simulation and large deviation theory are the natural tools here: the failures that matter most in deployment are exactly the ones too infrequent to observe by running the agent a few hundred times.</p>
+    <p>Alongside prediction, I am interested in diagnosis. When an agent fails, which step actually caused it? Answering that well requires causal reasoning over the trajectory rather than a scan for the last thing that went wrong.</p>
+
+    <h2>Vision-language and spatial AI</h2>
+    <p>Much of my industry work was on models that reason about the physical world: vision-language models for spatial reasoning and 3D scene understanding, point tracking, and camera imaging pipelines. Agents that act in the world will increasingly be built on models like these, and their failure modes are often perceptual. I continue to work on how multimodal models perceive, and misperceive, space and geometry.</p>
+
+    <h2>Efficient models and on-device inference</h2>
+    <p>Reliability also depends on what can actually run on the hardware in front of the user. I have a long-standing interest in hardware-efficient architectures and optimization for vision and multimodal models, particularly for edge and on-device settings, where power and latency budgets are tight.</p>
+
+    <h2>Background</h2>
+    <p>My PhD work at Purdue introduced a probabilistic framework for simulating rare events in Markov random fields, with applications to microstructure evolution in materials. The through-line from that work to what I do now is a consistent one: the events that matter are the ones that almost never happen, and studying them needs methods built for that.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Shruthi Kubatur, 2026</span>
+    <span>El Paso, Texas</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+:root {
+  --navy: #1B2A41;
+  --paper: #F6F7F5;
+  --ink: #1F2530;
+  --slate: #5C6675;
+  --line: #D9DDD8;
+  --amber: #C8892B;
+  --measure: 62ch;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  font-optical-sizing: auto;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--amber); }
+a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+.wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--line);
+}
+header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+nav a { text-decoration: none; color: var(--slate); font-size: 0.98rem; }
+nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--amber); padding-bottom: 2px; }
+nav a:hover { color: var(--ink); }
+
+/* Hero (home only) */
+.hero {
+  background: var(--navy);
+  color: #E8EBEF;
+}
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  padding-top: 3.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.12;
+  margin: 0 0 1rem;
+  color: #fff;
+  max-width: 16ch;
+}
+.hero p.role {
+  margin: 0 0 2rem;
+  color: #B9C2CE;
+  font-size: 1.05rem;
+  max-width: 34ch;
+}
+.hero figure { margin: 0; align-self: end; justify-self: end; }
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+                      linear-gradient(to bottom, transparent, #000 15%);
+  mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+              linear-gradient(to bottom, transparent, #000 15%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.trajectory { width: 100%; height: auto; display: block; margin-bottom: 2.5rem; }
+
+/* Main content */
+main .wrap { padding-top: 3rem; padding-bottom: 4rem; }
+main h1 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+main h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 2.6rem 0 0.7rem;
+}
+main h2:first-child { margin-top: 0; }
+main p, main li { max-width: var(--measure); }
+main p { margin: 0 0 1.1rem; }
+
+.lede { font-size: 1.18rem; line-height: 1.55; }
+
+.note {
+  border-left: 3px solid var(--amber);
+  padding: 0.6rem 0 0.6rem 1.2rem;
+  margin: 2rem 0;
+  max-width: var(--measure);
+}
+.note p { margin: 0; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Publication list */
+.pubs { list-style: none; padding: 0; margin: 0; }
+.pubs li { padding: 0.9rem 0; border-top: 1px solid var(--line); }
+.pubs li:last-child { border-bottom: 1px solid var(--line); }
+.pubs .title { display: block; font-weight: 600; }
+.pubs .venue { color: var(--slate); }
+.year-head { color: var(--slate); font-weight: 400; font-size: 1rem; margin: 2.2rem 0 0.4rem; }
+
+/* Plain lists */
+main ul.plain { padding-left: 1.1rem; }
+main ul.plain li { margin-bottom: 0.5rem; }
+
+dl { max-width: var(--measure); }
+dt { font-weight: 600; margin-top: 1rem; }
+dd { margin: 0.2rem 0 0; color: var(--ink); }
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--slate);
+  font-size: 0.92rem;
+}
+footer .wrap { padding-top: 1.4rem; padding-bottom: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+
+@media (max-width: 720px) {
+  html { font-size: 16px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero figure { justify-self: start; }
+  .hero img { max-width: 220px; }
+  .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .trajectory .branch { stroke-dasharray: 260; stroke-dashoffset: 260; animation: draw 1.2s ease-out 0.4s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+}

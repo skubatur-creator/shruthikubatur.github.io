@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shruthi Kubatur</title>
+<meta name="description" content="Shruthi Kubatur is an Assistant Professor of Computer Science at UTEP. She studies how AI agents fail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Shruthi Kubatur</a>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="join.html">Join</a>
+      <a href="assets/cv.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Reliable AI, from perception to autonomy.</h1>
+      <p class="role">Clare Boothe Luce Assistant Professor of Computer Science, The University of Texas at El Paso</p>
+      <svg class="trajectory" viewBox="0 0 560 150" role="img" aria-label="A sequence of agent steps along a line, with one step branching off into a diverging path">
+        <!-- main trajectory -->
+        <path d="M20 60 L540 60" stroke="#6F7E93" stroke-width="1.5" fill="none"/>
+        <g fill="#E8EBEF">
+          <circle cx="20" cy="60" r="4"/>
+          <circle cx="110" cy="60" r="4"/>
+          <circle cx="200" cy="60" r="4"/>
+          <circle cx="290" cy="60" r="4"/>
+          <circle cx="380" cy="60" r="4"/>
+          <circle cx="470" cy="60" r="4"/>
+          <circle cx="540" cy="60" r="4"/>
+        </g>
+        <!-- diverging failure branch -->
+        <path class="branch" d="M200 60 C 260 62, 300 80, 340 110 S 420 138, 540 140" stroke="#C8892B" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <g fill="#C8892B">
+          <circle cx="200" cy="60" r="5"/>
+          <circle cx="283" cy="82" r="3.5"/>
+          <circle cx="360" cy="120" r="3.5"/>
+          <circle cx="450" cy="137" r="3.5"/>
+          <circle cx="540" cy="140" r="4"/>
+        </g>
+        <text x="200" y="42" fill="#B9C2CE" font-size="12" font-family="inherit" text-anchor="middle">a small error</text>
+        <text x="540" y="128" fill="#C8892B" font-size="12" font-family="inherit" text-anchor="end">a failed task</text>
+      </svg>
+    </div>
+    <figure>
+      <img src="assets/photo.png" alt="Shruthi Kubatur">
+    </figure>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <p class="lede">My current focus is how AI agents fail. Most AI systems are evaluated one input at a time: a prompt goes in, an answer comes out, and we score the answer. AI agents do not work that way. They plan, call tools, and act over many steps, so a small error early in a task can compound into a failure that looks nothing like where it started.</p>
+
+    <p>My research builds models of these failure trajectories. I use tools from rare-event simulation and large deviation theory to model how failures unfold across the steps of a multi-step agentic workflow, and then use those models to predict, analyze, and trace failure pathways back to their origin. The goal is to make agent failures rare, predictable, and diagnosable rather than surprising.</p>
+
+    <p>Before joining UTEP in 2026, I spent eight years building computer vision and multimodal models in industry, including five at Apple, where I led work on vision-language models for spatial reasoning and on efficient on-device vision. I hold a PhD in Electrical Engineering from Purdue University, where I worked with Mary Comer on stochastic modeling and rare-event simulation. I am also the founder of Causyx, a startup working on trajectory-level risk analysis for AI agents.</p>
+
+    <div class="note">
+      <p>I am recruiting PhD students to start in Fall 2027, and I am working with UTEP masters and undergraduate students now. <a href="join.html">How to get in touch.</a></p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Department of Computer Science<br>The University of Texas at El Paso<br><a href="mailto:sskubatur@utep.edu">sskubatur@utep.edu</a><br><a href="https://www.linkedin.com/in/shruthi-kubatur">LinkedIn</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Shruthi Kubatur, 2026</span>
+    <span>El Paso, Texas</span>
+  </div>
+</footer>
+
+</body>
+</html>
